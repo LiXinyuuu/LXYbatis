@@ -5,7 +5,7 @@ import java.util.Date;
 public class User {
     Integer id;
     String username;
-    String nick_name;
+    String nickName;
     Date birthday;
     Integer sex;
     String address;
@@ -14,12 +14,8 @@ public class User {
         return username;
     }
 
-    public String getNick_name() {
-        return nick_name;
-    }
-
-    public void setNick_name(String nick_name) {
-        this.nick_name = nick_name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public int getId() {
@@ -40,7 +36,11 @@ public class User {
 
 
     public void setNickName(String nickName) {
-        nickName = nickName;
+        this.nickName = nickName;
+    }
+
+    public String getNickName() {
+        return nickName;
     }
 
     public int getSex() {
@@ -48,7 +48,7 @@ public class User {
     }
 
     public void setSex(Integer sex) {
-        sex = sex;
+        this.sex = sex;
     }
 
     public String getAddress() {
@@ -56,7 +56,7 @@ public class User {
     }
 
     public void setAddress(String address) {
-        address = address;
+        this.address = address;
     }
 
 
@@ -65,7 +65,7 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
-                ", nick_name='" + nick_name + '\'' +
+                ", nickName='" + nickName + '\'' +
                 ", birthday=" + birthday +
                 ", sex=" + sex +
                 ", address='" + address + '\'' +

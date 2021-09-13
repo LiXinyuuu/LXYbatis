@@ -7,10 +7,9 @@ import demo.proxy.MapperProxy;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
-import java.sql.SQLException;
 
 public class MapperProxyFactory {
-    public static UserMapper getMapper(Class mapper) throws SQLException, ClassNotFoundException {
+    public static UserMapper getMapper(Class mapper) {
         Annotation annotation = mapper.getAnnotation(LMapper.class);
         if(annotation==null){
             return null;

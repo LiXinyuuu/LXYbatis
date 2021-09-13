@@ -15,6 +15,6 @@ public interface UserMapper {
      int update();
      @Delete("delete from user where id = 2 ")
      int delete();
-     @Insert("insert into user values(5,'水水水水','卡','2021-09-10 14:56:56',1,'啥的') ")
+     @Insert("insert into user(username,nick_name,birthday,sex,address)values('水水水水','卡','2021-09-10 14:56:56',1,'啥的') ")
      int insert();
 }
