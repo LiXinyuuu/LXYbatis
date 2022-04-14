@@ -11,10 +11,10 @@ public interface UserMapper {
      User select();
      @Select("select * from user")
      List<User> selectAll();
-     @Update("update user set username = '是啥' where id = 1 ")
+     @Update("update user set user_name = '是啥' where id = 1 ")
      int update();
      @Delete("delete from user where id = 2 ")
      int delete();
-     @Insert("insert into user(username,nick_name,birthday,sex,address)values('水水水水','卡','2021-09-10 14:56:56',1,'啥的') ")
+     @Insert("insert into user(user_name,nick_name,birthday,sex,address)values('水水水水','卡','2021-09-10 14:56:56',1,'啥的') ")
      int insert();
 }

@@ -24,7 +24,9 @@ public class MapperProxy implements InvocationHandler {
             List list = JDBCUtil.select(sql, method);
             Class<?> type = method.getReturnType();
             if (!type.equals(List.class)) {
+                if(list.size()>0)
                 return list.get(0);
+                return null;
             }
             return list;
         } else if (annotation instanceof Update) {
